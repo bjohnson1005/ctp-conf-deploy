@@ -1,0 +1,51 @@
+{
+    "signature": "ComponentDataModel_001",
+    "required": [
+	    "signature",
+	    "state",
+	    "identifier",
+	    "aliases",
+	    "authorizedroles",
+	    "multiworker",
+	    "startworkerscount",
+	    "maxworkerscount",
+	    "attenuateminutes",
+	    "workerclassname",
+	    "idleminutes",
+	    "stoponerror",
+	    "maxqueuedepth",
+	    "sourcequeue",
+	    "resources"
+    ],
+    "identifier": "MongoDbReadSeeder",
+    "aliases": {
+        "filename": "MongoDbReadSeeder.json",
+        "alias": "MongoDbReadSeeder"
+    },
+    "iconfile": "nil",
+    "state": true,
+    "comment": "Reads a list of ids from a file and quries them against mongo from the MongoDb database.",
+    "authorizedroles": [
+        "task_001", "user_001", "worker_001", "app_001", "su_001", "admin_001"
+    ],
+    "multiworker": false,
+    "startworkerscount": 1,
+    "maxworkerscount": 20,
+    "attenuateminutes": 1,
+    "workerdirectives": [
+    ],
+    "directiveclassname": "nil",
+    "authsignature": "nil",
+    "workerclassname": "$BASE_PACKAGE$.workers.mongo.MongoDbReadSeeder",
+    "idleminutes": 0.01,
+    "stoponerror": false,
+    "sourcequeue": "MONGO-SEEDER",
+    "maxqueuedepth": 1000,
+    "destinationqueue": "APPENDER",
+    "adjunctqueue": "nil",
+    "errorqueue": "nil",
+    "alternategrid": "nil",
+    "resources": {
+        "ExternalListObject_001": "cleanup/seed_mongoRead.txt"
+    }
+}

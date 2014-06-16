@@ -1,0 +1,13 @@
+{
+    "signature": "ServiceMapping_001",
+    "state": true,
+    "identifier": "Services",
+    "version": "$BUILD_VERSION$",
+    "comment": "SIGNATURE to configuration files (CDM) when needed by a Service or API.",
+    "resources": {
+    "LentilServicesGet_Class_001" : "LentilTransformer.json",
+    "ServicesServlet_Class_001" : "ServicesServlet.json",
+    "DataServicesPost_Class_001" : "ServicesServlet.json",
+    "UtilServicesGet_Class_001": "ServicesServlet.json"
+  }
+}

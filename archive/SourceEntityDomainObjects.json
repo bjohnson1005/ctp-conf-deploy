@@ -1,0 +1,54 @@
+{
+    "signature": "ComponentDataModel_001",
+    "required": [
+        "signature",
+        "state",
+        "identifier",
+        "aliases",
+        "authorizedroles",
+        "multiworker",
+        "startworkerscount",
+        "maxworkerscount",
+        "attenuateminutes",
+        "workerclassname",
+        "directiveclassname",
+        "workerdirectives",
+        "idleminutes",
+        "stoponerror",
+        "maxqueuedepth",
+        
+        "sourcequeue"
+    ],
+    "identifier": "SourceEntityDomainObjects",
+    "aliases": {
+        "filename": "SourceEntityDomainObjects.json",
+        "alias": "SourceEntityDomainObjects"
+    },
+    "iconfile": "nil",
+    "state": true,
+    "comment": "Seeds (sources) a Queue and Map (source) with test ProcessObjects.",
+    "authorizedroles": [
+        "task_001", "user_001", "worker_001", "app_001", "su_001", "admin_001"
+    ],
+    "multiworker": true,
+    "startworkerscount": 1,
+    "maxworkerscount": 20,
+    "attenuateminutes": 1,
+    "workerdirectives": [
+        "nil"
+    ],
+    "directiveclassname": "none",
+    "authsignature": "nil",
+    "workerclassname": "$BASE_PACKAGE$.workers.source.SourceEntityDomainObjects",
+    "idleminutes": 1,
+    "stoponerror": false,
+    "sourcequeue": "SEEDER",
+    "maxqueuedepth": 1000,
+    "destinationqueue": "nil",
+    "adjunctqueue": "nil",
+    "errorqueue": "nil",
+    "alternategrid": "nil",
+    "resources": {
+        "nil": "nil"
+    }
+}

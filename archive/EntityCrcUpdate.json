@@ -1,0 +1,43 @@
+{
+    "signature": "ComponentDataModel_001",
+    "required": [
+        "signature",
+        "state",
+        "identifier",
+        "aliases",
+        "authorizedroles",
+        "resources"
+    ],
+    "identifier": "EntityCrcUpdate",
+    "aliases": {
+        "filename": "EntityCrcUpdate.json",
+        "alias": "EntityCrcUpdate"
+    },
+    "iconfile": "nil",
+    "state": true,
+    "comment": "Forces an Entity crc to a valid state with a new timestamp duration/interval and CRC32 calculation.",
+    "authorizedroles": [
+        "task_001", "user_001", "worker_001", "app_001", "su_001", "admin_001"
+    ],
+    "multiworker": true,
+    "startworkerscount": 3,
+    "maxworkerscount": 20,
+    "attenuateminutes": 1,
+    "workerdirectives": [
+        "none"
+    ],
+    "directiveclassname": "none",
+    "authsignature": "nil",
+    "workerclassname": "$BASE_PACKAGE$.workers.entity.EntityCrcUpdate",
+    "idleminutes": 0.1,
+    "stoponerror": false,
+    "sourcequeue": "nil",
+    "maxqueuedepth": 2000,
+    "destinationqueue": "nil",
+    "adjunctqueue": "nil",
+    "errorqueue": "nil",
+    "alternategrid": "nil",
+    "resources": {
+        "nil": "nil"
+    }
+}

@@ -1,0 +1,6 @@
+{ 
+"signature" : "ExternalListObject_001",
+"listofitems" : [
+"/Users/wallj/temp/NPOPortalMirror/"
+]}
+  

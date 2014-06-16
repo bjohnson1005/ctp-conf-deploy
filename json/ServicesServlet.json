@@ -1,0 +1,84 @@
+{
+    "signature": "ComponentDataModel_001",
+    "required": [
+        "signature",
+        "state",
+        "identifier",
+        "aliases",
+        "authorizedroles",
+        "resources"
+    ],
+    "identifier": "ServicesServlet",
+    "aliases": {
+        "filename": "ServicesServlet.json",
+        "alias": "ServicesServlet"
+    },
+    "iconfile": "nil",
+    "state": true,
+    "comment": "Used in the context of a Service rather than a Worker configuration.",
+    "authorizedroles": [
+        "task_001", "user_001", "worker_001", "app_001", "su_001", "admin_001"
+    ],
+    "multiworker": false,
+    "startworkerscount": 1,
+    "maxworkerscount": 20,
+    "attenuateminutes": 1,
+    "workerdirectives": [
+        "none"
+    ],
+    "directiveclassname": "none",
+    "authsignature": "nil",
+    "workerclassname": "none",
+    "idleminutes": 0.1,
+    "stoponerror": false,
+    "sourcequeue": "nil",
+    "maxqueuedepth": 2000,
+    "destinationqueue": "nil",
+    "adjunctqueue": "nil",
+    "errorqueue": "nil",
+    "alternategrid": "nil",
+    "resources": {
+        "include": {
+            "ServicesObject_001": {
+                "servicesObject": {
+                "get": {
+                	"data": "/services/data/v_001/",
+                	"resources": "/services/resource/v_001/",
+                	"queues": "/services/queue/v_001/",
+                	"sqs": "/services/sqs/v_001/",
+                	"queries": "/services/query/v_001/",
+                	"lentil": "/services/lentil/v_001/",
+                	"utils": "/services/utils/v_001/"
+                    },
+                "post": {
+                	"data": "/services/data/v_001/",
+                	"queues": "/services/queue/v_001/"
+                    },
+                "validation" : {
+                	"required" : [
+                	"EntityObject_001.ORG.VALUE",
+					"EntityObject_001.ORG.COUNTRYID",
+					"LocationObject_001.ORG.VALUE",
+					"StatusObject_001.VALUE",
+					"DescriptiveTextObject_001.VALUE",
+					"FinancialObject_001.VALUE",
+					"DescriptiveTextObject_001.VALUE",
+					"ExternalReferenceObject_001.EXTERNAL.VALUE",
+					"ExternalReferenceObject_001.EXTERNAL.AUTHORITATIVESOURCE",
+					"ExternalReferenceObject_001.PP.VALUE",
+					"ExternalReferenceObject_001.PP.AUTHORITATIVESOURCE",
+					"ExternalReferenceObject_001.TSG.VALUE",
+					"ExternalReferenceObject_001.TSG.AUTHORITATIVESOURCE",
+					"LegalIdentifierObject_001.0.TYPE",
+					"LegalIdentifierObject_001.0.VALUE",
+					"PurposeObject_001.PRIMARY.VALUE",
+					"PhoneObject_001.ORG.VALUE",
+					"EmailObject_001.ORG.TYPE",
+					"EmailObject_001.ORG.VALUE"
+                	]
+                	}
+                }
+            }
+        }
+    }
+}

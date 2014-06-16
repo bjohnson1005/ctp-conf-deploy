@@ -1,0 +1,43 @@
+{
+    "signature": "ComponentDataModel_001",
+    "required": [
+        "signature",
+        "state",
+        "identifier",
+        "aliases",
+        "authorizedroles",
+        "resources"
+    ],
+    "identifier": "EntityCrcExpire",
+    "aliases": {
+        "filename": "EntityCrcExpire.json",
+        "alias": "EntityCrcExpire"
+    },
+    "iconfile": "nil",
+    "state": true,
+    "comment": "Checks an Entity expiration duration period/interval and sets an Entity crc to an expired state.",
+    "authorizedroles": [
+        "task_001", "user_001", "worker_001", "app_001", "su_001", "admin_001"
+    ],
+    "multiworker": true,
+    "startworkerscount": 3,
+    "maxworkerscount": 20,
+    "attenuateminutes": 1,
+    "workerdirectives": [
+        "none"
+    ],
+    "directiveclassname": "none",
+    "authsignature": "nil",
+    "workerclassname": "$BASE_PACKAGE$.workers.entity.EntityCrcExpire",
+    "idleminutes": 0.1,
+    "stoponerror": false,
+    "sourcequeue": "nil",
+    "maxqueuedepth": 2000,
+    "destinationqueue": "nil",
+    "adjunctqueue": "nil",
+    "errorqueue": "nil",
+    "alternategrid": "nil",
+    "resources": {
+        "nil": "nil"
+    }
+}

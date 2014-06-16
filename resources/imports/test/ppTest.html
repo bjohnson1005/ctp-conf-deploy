@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="utf-8" http-equiv="encoding">
+    </head>
+    <body>
+    <script src="jsobjects/ppData.js"></script>
+    <script src="jsobjects/po1.js"></script>
+    <script src="jsobjects/ids.js"></script>
+    <script src="jsobjects/cdmObjects.js"></script>
+    <script src="jsobjects/dataSourceId.js"></script>
+    <script src="jsobjects/dataSourceObject.js"></script>
+    <script src="jsobjects/tsacNteeMappings.js"></script>
+    <script src="../ppImport_1.js"></script>
+
+    <script>
+       var mapofvars = {};
+        mapofvars["po"] = po;
+        mapofvars["data"] = data;
+        mapofvars["ids"] = ids;
+        mapofvars["cdmObjects"] = cdmObjects;
+        mapofvars["dataSourceId"] = "509955";
+        mapofvars["dataSourceObject"] = dataSourceObject;
+        mapofvars["tsacNteeMappings"] = tsacNteeMappings;
+
+        var strmapofvars = JSON.stringify(mapofvars);
+        console.log(JSON.parse(iterate(strmapofvars)));
+    </script>
+    </body>
+</html>

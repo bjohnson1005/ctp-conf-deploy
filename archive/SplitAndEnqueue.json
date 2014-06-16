@@ -1,0 +1,53 @@
+{
+    "signature": "ComponentDataModel_001",
+    "required": [
+        "signature",
+        "state",
+        "identifier",
+        "aliases",
+        "authorizedroles",
+        "multiworker",
+        "workerclassname"
+    ],
+    "identifier": "SplitAndEnqueue",
+    "aliases": {
+        "filename": "SplitAndEnqueue.json",
+        "alias": "SplitAndEnqueue"
+    },
+    "iconfile": "nil",
+    "state": true,
+    "comment": "Enqueues a ProcessObject from the sourceQueue to a list of Queues.",
+    "authorizedroles": [
+        "task_001", "user_001", "worker_001", "app_001", "su_001", "admin_001"
+    ],
+    "multiworker": false,
+    "startworkerscount": 1,
+    "maxworkerscount": 20,
+    "attenuateminutes": 1,
+    "workerdirectives": [
+        "nil"
+    ],
+    "directiveclassname": "none",
+    "authsignature": "nil",
+    "workerclassname": "$BASE_PACKAGE$.workers.splitter.SplitAndEnqueue",
+    "idleminutes": 0.1,
+    "stoponerror": false,
+    "sourcequeue": "SPLITTER",
+    "maxqueuedepth": 1000,
+    "destinationqueue": "nil",
+    "adjunctqueue": "nil",
+    "errorqueue": "nil",
+    "alternategrid": "nil",
+    "resources": {
+        "include": {
+            "SplitterObject_001": {
+                "signature": "SplitterObject_001",
+                "queuesSet": [
+                    "3000-JOIN",
+                    "2000-JOIN",
+                    "1000-JOIN"
+                ]
+            }
+        }
+    }
+}

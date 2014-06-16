@@ -1,0 +1,224 @@
+{
+    "signature": "Connections_001",
+    "state": true,
+    "identifier": "Basic-Connections",
+    "version": "$BUILD_VERSION$",
+    "comment": "Connections for from here to there.",
+    "awskey": {
+        "state": true,
+        "signature": "TransObject_001",
+        "uri": "nil",
+        "data": "124:4a3:5c8:wrbCvMKywq3CqnnCsMKWwrPDhsOLwr/DgsKYwrxhwrnDgsK8wrY="
+    },
+    "awssecret": {
+        "state": true,
+        "signature": "TransObject_001",
+        "uri": "nil",
+        "data": "251:557:b9:w63CmMKVZcK1w5XCpcK6wrrCnMOEw6HCq0/CqcOVw43CosOCw5zCocKZwqfDosKywrfDqMKqw5x1w5XDhMOVc8OKwqPDi8Ofw4/Cuw=="
+    },
+    "awss3": {
+        "signature": "S3ClientObject_001",
+        "bucketname": "coop-object-bucket",
+        "foldername": "OBJECTS"
+    },
+    "awss3cors": {
+        "signature": "S3CORSObject_001",
+        "ruleId": "Coop-Default-Rule",
+        "maxAgeSeconds": 432000,
+        "allowedHeaders": [
+            "*"
+        ],
+        "allowedMethods": [
+            "get",
+            "put",
+            "post",
+            "delete"
+        ],
+        "allowedOrigins": [
+            "*"
+        ],
+        "exposedHeaders": [
+            "x-amz-server-side-encryption"
+        ]
+    },
+    "awscaches" : {
+    	"signature": "AWSCacheNames_001",
+    	"auth": "coop-auth-cache-bucket",
+		"session": "coop-session-cache-bucket",
+		"artifacts": "coop-artifact-bucket",
+		"masters": "coop-masters-bucket",
+		"objects": "coop-objects-bucket",
+		"bridge": "coop-bridge-bucket",
+		"temp": "coop-temp-bucket",
+		"source": "coop-source-bucket",
+		"destination": "coop-destination-bucket",
+		"adjunct": "coop-adjunct-bucket",
+		"error": "coop-error-bucket",
+		"prod": "coop-prod-bucket",
+		"qual": "coop-qual-bucket",
+		"stage": "coop-stage-bucket",
+		"test": "coop-test-bucket"
+    },
+    "elasticsearch": {
+        "signature": "EsClientObject_001",
+        "cluster": "Automaton-ESCluster",
+        "protocol": "http",
+        "hostname": "54.235.208.193",
+        "httpport": 9200,
+        "transportport": 9300,
+        "checkclusterstatus": false,
+        "key": {
+            "state": true,
+            "signature": "TransObject_001",
+            "uri": "nil",
+            "data": "none"
+        },
+        "secret": {
+            "state": true,
+            "signature": "TransObject_001",
+            "uri": "nil",
+            "data": "none"
+        },
+        "indices": [
+            {
+                "index": "coop-test-index",
+                "indextype": "processObject",
+                "mapping": "none",
+                "mappingfile": "nil"
+            }
+        ]
+    },
+    "mongodb": {
+        "signature": "MongoClientObject_001",
+        "database": "coop-test-objects",
+        "collection": "processObjects",
+        "indexFields": {
+            "timestamp": 1,
+            "date": 1,
+            "id": 1
+        },
+        "hosts": {
+            "54.235.203.67": 27017
+        },
+        "key": {
+            "state": true,
+            "signature": "TransObject_001",
+            "uri": "nil",
+            "data": "none"
+        },
+        "secret": {
+            "state": true,
+            "signature": "TransObject_001",
+            "uri": "nil",
+            "data": "none"
+        },
+        "connectionsPerHost" : 100
+    },
+    "postgres": {
+        "signature": "PostgresClientObject_001",
+        "jdbcUrl": "jdbc:postgresql://oregon-vpc-public.c0od26w8owxk.us-west-2.rds.amazonaws.com:5432/",
+        "database": "ctpdb",
+        "key": {
+            "state": true,
+            "signature": "TransObject_001",
+            "uri": "nil",
+            "data": "25d:5af:630:woPClMOkw5HDmQ=="
+        },
+        "secret": {
+            "state": true,
+            "signature": "TransObject_001",
+            "uri": "nil",
+            "data": "d7:3af:57d:worDqsKXwpPCtsOew5/Ct8KGwqHCrA=="
+        },
+        "sslenabled": true,
+        "vpcenabled": false
+    },
+    "grids" :  {   
+		"SQSS3Grid_001": {
+			"state": true,
+			"signature": "GridObject_001",
+			"gridname": "SQSS3Grid_001",
+			"gridaliase": "default",
+			"gridispublic": false,
+			"gridpropertiesfile": "nil",
+			"gridbackingpropertiesfile": "backingcache.xml",
+			"gridhost": "54.235.203.67",
+			"gridport": 27017,
+			"griddatastore": "coop",
+			"griddatabucket": "datagrid",
+				"gridkey": {
+					"state": true,
+					"signature": "TransObject_001",
+					"uri": "nil",
+					"data": "nil"
+				 },
+				"gridsecret": {
+					"state": true,
+					"signature": "TransObject_001",
+					"uri": "nil",
+					"data": "nil"
+				}
+			},
+		"PgGrid_001": {
+			"state": true,
+			"signature": "GridObject_001",
+			"gridname": "PgGrid_001",
+			"gridaliase": "default",
+			"gridispublic": false,
+			"gridpropertiesfile": "nil",
+			"gridbackingpropertiesfile": "backingcache.xml",
+			"gridhost": "0.0.0.0",
+			"gridport": 65535,
+			"griddatastore": "nil",
+			"griddatabucket": "nil",
+				"gridkey": {
+					"state": true,
+					"signature": "TransObject_001",
+					"uri": "nil",
+					"data": "nil"
+				 },
+				"gridsecret": {
+					"state": true,
+					"signature": "TransObject_001",
+					"uri": "nil",
+					"data": "nil"
+				}
+			}
+    },
+    "riak": {
+        "signature": "RiakClientObject_001",
+        "cluster": "Coop-RKV-Cluster",
+        "protocol": "http",
+        "hostname": "192.168.1.130",
+        "httpport": 8098,
+        "transportport": 8087,
+        "indexFields": {
+            "timestamp": 1,
+            "date": 1,
+            "id": 1
+        }
+    },
+    "ssl": {
+        "signature": "SslObject_001",
+        "sslkeystore": "$( star_tsgctp_org.jks )$",
+        "sslkeystoresecret": {
+            "state": true,
+            "signature": "TransObject_001",
+            "uri": "nil",
+            "data": "587:547:177:w5fDocOkw53ChcOmw5DDpsOdw6XDlw=="
+        },
+        "sslkeysecret": {
+            "state": true,
+            "signature": "TransObject_001",
+            "uri": "nil",
+            "data": "5c8:1fd:5d5:woPDncOew57ChcOnw43DqMObw5/DiA=="
+        },
+        "truststore": "none",
+        "truststoresecret": {
+            "state": true,
+            "signature": "TransObject_001",
+            "uri": "nil",
+            "data": "none"
+        }
+    }
+}

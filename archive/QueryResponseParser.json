@@ -1,0 +1,100 @@
+{
+    "signature": "ComponentDataModel_001",
+    "required": [
+        "signature",
+        "state",
+        "identifier",
+        "aliases",
+        "authorizedroles",
+        "multiworker",
+        "startworkerscount",
+        "maxworkerscount",
+        "attenuateminutes",
+        "workerclassname",
+        "directiveclassname",
+        "workerdirectives",
+        "idleminutes",
+        "stoponerror",
+        "maxqueuedepth",
+        "resources",
+        "sourcequeue",
+        "destinationqueue",
+        "adjunctqueue",
+        "resources"
+    ],
+    "identifier": "QueryResponseParser",
+    "aliases": {
+        "filename": "QueryResponseParser.json",
+        "alias": "QueryResponseParser"
+    },
+    "iconfile": "nil",
+    "state": true,
+    "comment": "Extracts text and metadata from HTML returned from a query for further processing.",
+    "authorizedroles": [
+        "task_001", "user_001", "worker_001", "app_001", "su_001", "admin_001"
+    ],
+    "multiworker": true,
+    "startworkerscount": 4,
+    "maxworkerscount": 20,
+    "attenuateminutes": 1,
+    "workerdirectives": [
+        "nil"
+    ],
+    "directiveclassname": "none",
+    "authsignature": "nil",
+    "workerclassname": "$BASE_PACKAGE$.workers.query.QueryResponseParser",
+    "idleminutes": 0.25,
+    "stoponerror": false,
+    "sourcequeue": "QUERY",
+    "maxqueuedepth": 1000,
+    "destinationqueue": "SENDMAIL",
+    "adjunctqueue": "URL",
+    "errorqueue": "nil",
+    "alternategrid": "nil",
+    "resources": {
+        "include": {
+            "QueryObject_001": {
+                "signature": "QueryObject_001",
+                "queryurl": "http://www.bing.com/search?q=",
+                "querykey": {
+                    "state": true,
+                    "signature": "TransObject_001",
+                    "uri": "nil",
+                    "data": "none"
+                },
+                "resultformat": "none",
+                "nextresultcode": "&first=",
+                "clusteralgorithm": "STCClusteringAlgorithm",
+                "maxresultcount": 10,
+                "maxdurationseconds": 3.75
+            },
+            "CalaisClientObject_001": {
+                "signature": "CalaisClientObject_001",
+                "licensekey": {
+                    "state": true,
+                    "signature": "TransObject_001",
+                    "uri": "nil",
+                    "data": "32c:620:e0:w5LDglTDpcKhwq3Dm8Oaw5HChsKcw5LDnsKfwqvCimPDmsOZwqzDgsOVU8OT"
+                },
+                "calaisurl": "http://api.opencalais.com/enlighten/calais.asmx/Enlighten",
+                "contentformat": "text/txt",
+                "outputformat": "xml/rdf"
+            },
+            "DbPediaObject_001": {
+                "signature": "DbPediaObject_001",
+                "querystring": "http://lookup.dbpedia.org/api/search.asmx/KeywordSearch?QueryClass=&MaxHits=10&QueryString=",
+                "maxhits": 10
+            },
+            "GeoNamesObject_001": {
+                "signature": "GeoNamesObject_001",
+                "username": {
+                    "state": true,
+                    "signature": "TransObject_001",
+                    "uri": "nil",
+                    "data": "none"
+                },
+                "languagecode": "en"
+            }
+        }
+    }
+}

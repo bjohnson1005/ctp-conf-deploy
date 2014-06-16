@@ -1,0 +1,3 @@
+
+$COOPERATIVE_OBJECT$;
+

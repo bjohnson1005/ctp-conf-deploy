@@ -1,0 +1,66 @@
+{
+    "signature": "ComponentDataModel_001",
+    "required": [
+        "signature",
+        "state",
+        "identifier",
+        "aliases",
+        "authorizedroles",
+        "multiworker",
+        "startworkerscount",
+        "maxworkerscount",
+        "attenuateminutes",
+        "workerclassname",
+        "directiveclassname",
+        "workerdirectives",
+        "idleminutes",
+        "stoponerror",
+        "maxqueuedepth",
+        "sourcequeue",
+        "destinationqueue"
+    ],
+    "identifier": "OSMGeocodeFetch",
+    "aliases": {
+        "filename": "OSMGeocodeFetch.json",
+        "alias": "OSMGeocodeFetch"
+    },
+    "iconfile": "nil",
+    "state": true,
+    "comment": "Fetches the geocodes for a given address, state/region and country.",
+    "authorizedroles": [
+        "task_001",
+        "user_001",
+        "worker_001",
+        "app_001",
+        "su_001",
+        "admin_001"
+    ],
+    "multiworker": false,
+    "startworkerscount": 1,
+    "maxworkerscount": 20,
+    "attenuateminutes": 1,
+    "workerdirectives": [
+        "nil"
+    ],
+    "directiveclassname": "none",
+    "authsignature": "nil",
+    "workerclassname": "$BASE_PACKAGE$.workers.geocode.OSMGeocodeFetch",
+    "idleminutes": 0.1,
+    "stoponerror": false,
+    "sourcequeue": "OSM-GEOCODE",
+    "maxqueuedepth": 1000,
+    "destinationqueue": "WRITER",
+    "adjunctqueue": "nil",
+    "errorqueue": "nil",
+    "alternategrid": "nil",
+    "resources": {
+        "include": {
+            "GeocodeObject_001": {
+                "signature": "GeocodeObject_001",
+                "serviceparams": {
+                    "servicekey": "&key=Fmjtd%7Cluubn16all%2Cra%3Do5-90ax16"
+                }
+            }
+        }
+    }
+}

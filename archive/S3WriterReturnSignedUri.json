@@ -1,0 +1,55 @@
+{
+    "signature": "ComponentDataModel_001",
+    "required": [
+        "signature",
+        "state",
+        "identifier",
+        "aliases",
+        "authorizedroles",
+        "multiworker",
+        "startworkerscount",
+        "maxworkerscount",
+        "attenuateminutes",
+        "workerclassname",
+        "directiveclassname",
+        "workerdirectives",
+        "idleminutes",
+        "stoponerror",
+        "maxqueuedepth",
+        
+        "sourcequeue",
+        "resources"
+    ],
+    "identifier": "S3WriterReturnSignedUri",
+    "aliases": {
+        "filename": "S3WriterReturnSignedUri.json",
+        "alias": "S3WriterReturnSignedUri"
+    },
+    "iconfile": "nil",
+    "state": true,
+    "comment": "Inputs a ProcessObject to the AWS S3 bucket and return the object signed URI.",
+    "authorizedroles": [
+        "task_001", "user_001", "worker_001", "app_001", "su_001", "admin_001"
+    ],
+    "multiworker": true,
+    "startworkerscount": 3,
+    "maxworkerscount": 20,
+    "attenuateminutes": 1,
+    "workerdirectives": [
+        "nil"
+    ],
+    "directiveclassname": "none",
+    "authsignature": "nil",
+    "workerclassname": "$BASE_PACKAGE$.workers.s3.S3WriterReturnSignedUri",
+    "idleminutes": 0.01,
+    "stoponerror": false,
+    "sourcequeue": "S3_WRITER_RETURN_URI",
+    "maxqueuedepth": 100000,
+    "destinationqueue": "nil",
+    "adjunctqueue": "nil",
+    "errorqueue": "nil",
+    "alternategrid": "nil",
+    "resources": {
+        "nil": "nil"
+    }
+}

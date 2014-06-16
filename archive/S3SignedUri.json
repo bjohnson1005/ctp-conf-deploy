@@ -1,0 +1,55 @@
+{
+    "signature": "ComponentDataModel_001",
+    "required": [
+        "signature",
+        "state",
+        "identifier",
+        "aliases",
+        "authorizedroles",
+        "multiworker",
+        "startworkerscount",
+        "maxworkerscount",
+        "attenuateminutes",
+        "workerclassname",
+        "directiveclassname",
+        "workerdirectives",
+        "idleminutes",
+        "stoponerror",
+        "maxqueuedepth",
+        
+        "sourcequeue",
+        "resources"
+    ],
+    "identifier": "S3SignedUri",
+    "aliases": {
+        "filename": "S3SignedUri.json",
+        "alias": "S3SignedUri"
+    },
+    "iconfile": "nil",
+    "state": true,
+    "comment": "Signs a URI for client driected input to the AWS S3 database.",
+    "authorizedroles": [
+        "task_001", "user_001", "worker_001", "app_001", "su_001", "admin_001"
+    ],
+    "multiworker": true,
+    "startworkerscount": 3,
+    "maxworkerscount": 20,
+    "attenuateminutes": 1,
+    "workerdirectives": [
+        "nil"
+    ],
+    "directiveclassname": "none",
+    "authsignature": "nil",
+    "workerclassname": "$BASE_PACKAGE$.workers.s3.S3SignedUri",
+    "idleminutes": 0.01,
+    "stoponerror": false,
+    "sourcequeue": "S3_SIGNED_URI",
+    "maxqueuedepth": 1000,
+    "destinationqueue": "S3_SIGNED_URI_RESULTS",
+    "adjunctqueue": "nil",
+    "errorqueue": "nil",
+    "alternategrid": "nil",
+    "resources": {
+        "nil": "nil"
+    }
+}

@@ -1,0 +1,70 @@
+{
+    "signature": "ComponentDataModel_001",
+    "required": [
+        "signature",
+        "state",
+        "identifier",
+        "aliases",
+        "authorizedroles",
+        "multiworker",
+        "startworkerscount",
+        "maxworkerscount",
+        "attenuateminutes",
+        "workerclassname",
+        "directiveclassname",
+        "workerdirectives",
+        "idleminutes",
+        "stoponerror",
+        "maxqueuedepth",
+        "resources",
+        "sourcequeue",
+        "destinationqueue",
+        "adjunctqueue",
+        "resources"
+    ],
+    "identifier": "SimpleTextAnalysis",
+    "aliases": {
+        "filename": "SimpleTextAnalysis.json",
+        "alias": "SimpleTextAnalysis"
+    },
+    "iconfile": "nil",
+    "state": true,
+    "comment": "Basis for performing simple NLP analysis of text.",
+    "authorizedroles": [
+        "task_001", "user_001", "worker_001", "app_001", "su_001", "admin_001"
+    ],
+    "multiworker": false,
+    "startworkerscount": 1,
+    "maxworkerscount": 20,
+    "attenuateminutes": 1,
+    "workerdirectives": [
+        "nil"
+    ],
+    "directiveclassname": "none",
+    "authsignature": "nil",
+    "workerclassname": "$BASE_PACKAGE$.workers.simpleanalysis.SimpleTextAnalysis",
+    "idleminutes": 0.25,
+    "stoponerror": false,
+    "sourcequeue": "WRITER-2",
+    "maxqueuedepth": 1000,
+    "destinationqueue": "SENDMAIL",
+    "adjunctqueue": "URL",
+    "errorqueue": "nil",
+    "alternategrid": "nil",
+    "resources": {
+        "include": {
+            "CalaisClientObject_001": {
+                "signature": "CalaisClientObject_001",
+                "licensekey": {
+                    "state": true,
+                    "signature": "TransObject_001",
+                    "uri": "nil",
+                    "data": "32c:620:e0:w5LDglTDpcKhwq3Dm8Oaw5HChsKcw5LDnsKfwqvCimPDmsOZwqzDgsOVU8OT"
+                },
+                "calaisurl": "http://api.opencalais.com/enlighten/calais.asmx/Enlighten",
+                "contentformat": "text/txt",
+                "outputformat": "xml/rdf"
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "signature": "CooperativeDataModel_001",
+    "state": true,
+    "identifier": "Harmonia",
+    "version": "$BUILD_VERSION$",
+    "contact": "jackeywall@idvc.io",
+    "comment": "Uses the StartUp File List and not one of the matrix files (CSV or XLS).",
+    "securitymanagerconfig": "ini.ini",
+    "rolesconfig": "RequiredRoles.json",
+    "configurationprofile": "Deploy_06_12_14",
+    "allowuseradd" : false,
+    "datagrid": "SQSS3Grid_001",
+    "authdb": "AuthPgDB_001",
+    "cachedb": "CachePgDB_001",
+    "deploystate": true,
+    "lifetimeinminutes": 0,
+    "conservativemode": false,
+    "logexecutionplan": false,
+    "consolelog": false,
+    "loglevel" : "info",
+    "logfile": "dblogger",
+    "startupmatrixfile": "nil",
+    "startupclass": "$BASE_PACKAGE$.basis.worker.WorkerStarter",
+    "startupfilelist": [
+    	"Start_Coop_Utils.json",
+        "Start_Coop_Servers.json",
+        "Start_Coop_StatusInterfaces.json"
+    ],
+    "platformconnectionsfile": "BasicConnections.json",
+    "environment": {
+        "GENERATED": "AUTOMATICALLY"
+    }
+}

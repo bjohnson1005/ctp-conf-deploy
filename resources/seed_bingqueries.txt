@@ -1,0 +1,16 @@
+{ 
+"signature" : "ExternalListObject_001",
+"listofitems" : [
+"The Smith Family",
+"Aboriginal Health and Medical Research Council",
+"Abbeywood Rural Fire Brigade",
+"Susan Tenby",
+"TechSoup",
+"Rebecca Masisak",
+"Dell Foundation",
+"Daniel Ben-Horin",
+"Help Hospitalized Veterans",
+"Marnie Webb",
+"Coalition to Salute Americas Heroes"
+]}
+  

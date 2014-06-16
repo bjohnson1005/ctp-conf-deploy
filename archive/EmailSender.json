@@ -1,0 +1,93 @@
+{
+    "signature": "ComponentDataModel_001",
+    "required": [
+        "signature",
+        "state",
+        "identifier",
+        "aliases",
+        "authorizedroles",
+        "multiworker",
+        "startworkerscount",
+        "maxworkerscount",
+        "attenuateminutes",
+        "workerclassname",
+        "directiveclassname",
+        "workerdirectives",
+        "idleminutes",
+        "stoponerror",
+        "maxqueuedepth",
+        
+        "sourcequeue",
+        "destinationqueue"
+    ],
+    "identifier": "EmailSender",
+    "aliases": {
+        "filename": "EmailSender.json",
+        "alias": "EmailSender"
+    },
+    "iconfile": "nil",
+    "state": true,
+    "comment": "Sends email.",
+    "authorizedroles": [
+        "task_001", "user_001", "worker_001", "app_001", "su_001", "admin_001"
+    ],
+    "multiworker": false,
+    "startworkerscount": 1,
+    "maxworkerscount": 20,
+    "attenuateminutes": 1,
+    "workerdirectives": [
+        "nil"
+    ],
+    "directiveclassname": "none",
+    "authsignature": "nil",
+    "workerclassname": "$BASE_PACKAGE$.workers.email.EmailSender",
+    "idleminutes": 0.1,
+    "stoponerror": false,
+    "sourcequeue": "PASSED",
+    "maxqueuedepth": 1000,
+    "destinationqueue": "SENTMAIL",
+    "adjunctqueue": "nil",
+    "errorqueue": "nil",
+    "alternategrid": "nil",
+    "resources": {
+        "include": {
+            "EmailerObject_001": {
+                "signature": "EmailerObject_001",
+                "type": "html",
+                "imapuser": {
+                    "state": true,
+                    "signature": "TransObject_001",
+                    "uri": "nil",
+                    "data": "457:61f:3f1:w5LDm8Onw57DpcKSw6LDjsKJw5TCpcOVw5HDk8OOw57Cl8OXwo/DmQ=="
+                },
+                "imappassword": {
+                    "state": true,
+                    "signature": "TransObject_001",
+                    "uri": "nil",
+                    "data": "449:167:63f:w5TChcOUwrDDlMOZw5HDj8OmwpnCpFHCoQ=="
+                },
+                "smtphost": "smtp.gmail.com",
+                "smtpsocketfactoryport": 465,
+                "smtpsocketfactoryclass": "javax.net.ssl.SSLSocketFactory",
+                "smtpauth": true,
+                "smtpport": 465,
+                "smtpfrom": "imsys.mail@gmail.com",
+                "esmtp": false,
+                "esmtpport": 587,
+                "smtpdebug": false
+            },
+            "TransformerModel_001": {
+                "signature": "TransformerModel_001",
+                "script": "none",
+                "function": "none",
+                "template": "EmbedPre.html",
+                "fileextension": "none",
+                "collectionsignature": "Appender_Object_001",
+                "collectionname": "objectCollection",
+                "writetodirectory": "none",
+                "usefilename": "none"
+            }
+        },
+        "ExternalListObject_001": "seed_recipients.txt"
+    }
+}

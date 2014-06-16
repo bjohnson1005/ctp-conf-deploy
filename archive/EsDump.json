@@ -1,0 +1,77 @@
+{
+    "signature": "ComponentDataModel_001",
+    "required": [
+        "signature",
+        "state",
+        "identifier",
+        "aliases",
+        "authorizedroles",
+        "multiworker",
+        "startworkerscount",
+        "maxworkerscount",
+        "attenuateminutes",
+        "workerclassname",
+        "directiveclassname",
+        "workerdirectives",
+        "idleminutes",
+        "stoponerror",
+        "maxqueuedepth",
+        
+        "sourcequeue",
+        "resources"
+    ],
+    "identifier": "EsDump",
+    "aliases": {
+        "filename": "EsDump.json",
+        "alias": "EsDump"
+    },
+    "iconfile": "nil",
+    "state": true,
+    "comment": "Inputs a search request to ElasticSearch and dumps the found ProcessObjects to a queue.",
+    "authorizedroles": [
+        "task_001", "user_001", "worker_001", "app_001", "su_001", "admin_001"
+    ],
+    "multiworker": false,
+    "startworkerscount": 1,
+    "maxworkerscount": 20,
+    "attenuateminutes": 1,
+    "workerdirectives": [
+        "nil"
+    ],
+    "directiveclassname": "none",
+    "authsignature": "nil",
+    "workerclassname": "$BASE_PACKAGE$.workers.elastic.EsDump",
+    "idleminutes": 0.01,
+    "stoponerror": false,
+    "sourcequeue": "ES_DUMP",
+    "maxqueuedepth": 1000,
+    "destinationqueue": "ES_DUMP_RESULTS",
+    "adjunctqueue": "nil",
+    "errorqueue": "nil",
+    "alternategrid": "nil",
+    "resources": {
+        "include": {
+            "EsSearchObject_001": {
+                "signature": "EsSearchObject_001",
+                "defaultField": "_all",
+                "sortField": "timestamp",
+                "sortOrder": "descending",
+                "searchType": "query_then_fetch",
+                "queryString": "use_directive",
+                "from": 0,
+                "size": 20,
+                "includeVersion": true,
+                "additionalFields": [
+                    "timestamp",
+                    "id",
+                    "source"
+                ]
+            },
+            "WriterObject_001": {
+                "signature": "WriterObject_001",
+                "writetodirectory": "$HOME_PATH$/temp/testwritetoJson/",
+                "deleteafterwrite": false
+            }
+        }
+    }
+}

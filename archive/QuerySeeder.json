@@ -1,0 +1,82 @@
+{
+    "signature": "ComponentDataModel_001",
+    "required": [
+        "signature",
+        "state",
+        "identifier",
+        "aliases",
+        "authorizedroles",
+        "multiworker",
+        "startworkerscount",
+        "maxworkerscount",
+        "attenuateminutes",
+        "workerclassname",
+        "directiveclassname",
+        "workerdirectives",
+        "idleminutes",
+        "stoponerror",
+        "maxqueuedepth",
+        
+        "sourcequeue"
+    ],
+    "identifier": "QuerySeeder",
+    "aliases": {
+        "filename": "QuerySeeder.json",
+        "alias": "QuerySeeder"
+    },
+    "iconfile": "nil",
+    "state": true,
+    "comment": "Seeds the Query component.",
+    "authorizedroles": [
+        "task_001", "user_001", "worker_001", "app_001", "su_001", "admin_001"
+    ],
+    "multiworker": false,
+    "startworkerscount": 1,
+    "maxworkerscount": 20,
+    "attenuateminutes": 1,
+    "workerdirectives": [
+        "nil"
+    ],
+    "directiveclassname": "none",
+    "authsignature": "nil",
+    "workerclassname": "$BASE_PACKAGE$.workers.query.QuerySeeder",
+    "idleminutes": 2,
+    "stoponerror": false,
+    "sourcequeue": "QUERY",
+    "maxqueuedepth": 1000,
+    "destinationqueue": "nil",
+    "adjunctqueue": "nil",
+    "errorqueue": "nil",
+    "alternategrid": "nil",
+    "resources": {
+        "include": {
+            "QueryObject_001": {
+                "signature": "QueryObject_001",
+                "queryurl": "http://www.bing.com/search?q=",
+                "querykey": {
+                    "state": true,
+                    "signature": "TransObject_001",
+                    "uri": "nil",
+                    "data": "none"
+                },
+                "resultformat": "none",
+                "nextresultcode": "&first=",
+                "maxresultcount": 50,
+                "maxdurationseconds": 3.75
+            },
+            "CalaisClientObject_001": {
+                "signature": "CalaisClientObject_001",
+                "licensekey": {
+                    "state": true,
+                    "signature": "TransObject_001",
+                    "uri": "nil",
+                    "data": "32c:620:e0:w5LDglTDpcKhwq3Dm8Oaw5HChsKcw5LDnsKfwqvCimPDmsOZwqzDgsOVU8OT"
+                },
+                "calaisurl": "http://api.opencalais.com/enlighten/calais.asmx/Enlighten",
+                "contentformat": "text/txt",
+                "outputformat": "xml/rdf"
+            }
+        },
+        "ExternalListObject_001": "seed_queries.txt"
+    }
+}

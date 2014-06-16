@@ -1,0 +1,67 @@
+{
+    "signature": "ComponentDataModel_001",
+    "required": [
+        "signature",
+        "state",
+        "identifier",
+        "aliases",
+        "authorizedroles",
+        "multiworker",
+        "startworkerscount",
+        "maxworkerscount",
+        "attenuateminutes",
+        "workerclassname",
+        "directiveclassname",
+        "workerdirectives",
+        "idleminutes",
+        "stoponerror",
+        "maxqueuedepth",
+        
+        "sourcequeue",
+        "resources"
+    ],
+    "identifier": "ProcessObjectArchiveFileAppender",
+    "aliases": {
+        "filename": "ProcessObjectArchiveFileAppender.json",
+        "alias": "ProcessObjectArchiveFileAppender"
+    },
+    "iconfile": "nil",
+    "state": true,
+    "comment": "Appends ProcessObject instances to a single file, as JSON encoded text.",
+    "authorizedroles": [
+        "task_001", "user_001", "worker_001", "app_001", "su_001", "admin_001"
+    ],
+    "multiworker": false,
+    "startworkerscount": 1,
+    "maxworkerscount": 20,
+    "attenuateminutes": 1,
+    "workerdirectives": [
+        "nil"
+    ],
+    "directiveclassname": "none",
+    "authsignature": "nil",
+    "workerclassname": "$BASE_PACKAGE$.workers.writers.ProcessObjectFileAppender",
+    "idleminutes": 0.1,
+    "stoponerror": false,
+    "sourcequeue": "APPENDER",
+    "maxqueuedepth": 2000,
+    "destinationqueue": "nil",
+    "adjunctqueue": "nil",
+    "errorqueue": "nil",
+    "alternategrid": "nil",
+    "resources": {
+        "include": {
+            "TransformerModel_001": {
+                "signature": "TransformerModel_001",
+                "script": "passThrough.js",
+                "function": "iterateObject",
+                "template": "none",
+                "fileextension": ".json",
+                "collectionsignature": "Archived_Objects_001",
+                "collectionname": "objectCollection",
+                "writetodirectory": "$HOME_PATH$/temp/testwritetoJson/",
+                "usefilename": "MGO_Archive_"
+            }
+        }
+    }
+}

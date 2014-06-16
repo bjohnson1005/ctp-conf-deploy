@@ -1,0 +1,56 @@
+{
+    "signature": "ComponentDataModel_001",
+    "required": [
+        "signature",
+        "state",
+        "identifier",
+        "aliases",
+        "authorizedroles",
+        "startworkerscount",
+        "multiworker",
+        "maxworkerscount",
+        "attenuateminutes",
+        "workerclassname",
+        "directiveclassname",
+        "workerdirectives",
+        "idleminutes",
+        "stoponerror",
+        "maxqueuedepth",
+        "resources",
+        "sourcequeue",
+        "destinationqueue"
+    ],
+    "identifier": "ImportRecordCheck",
+    "aliases": {
+        "filename": "ImportRecordCheck.json",
+        "alias": "ImportRecordCheck"
+    },
+    "iconfile": "nil",
+    "state": true,
+    "comment": "Parses CSV documents into Entity Object for import to Mongo.",
+    "authorizedroles": [
+        "task_001", "user_001", "worker_001", "app_001", "su_001", "admin_001"
+    ],
+    "multiworker": true,
+    "startworkerscount": 10,
+    "maxworkerscount": 50,
+    "attenuateminutes": 1,
+    "workerdirectives": [
+        "nil"
+    ],
+    "directiveclassname": "none",
+    "authsignature": "nil",
+    "workerclassname": "$BASE_PACKAGE$.workers.imports.ImportRecordCheck",
+    "idleminutes": 0.01,
+    "stoponerror": false,
+    "sourcequeue": "self",
+    "maxqueuedepth": 80000,
+    "destinationqueue": "IMPORT_PROCESSOR",
+    "adjunctqueue": "MONGO-READER",
+    "errorqueue": "nil",
+    "alternategrid": "nil",
+    "resources": {
+        "include": {
+        }
+    }
+}

@@ -1,0 +1,85 @@
+{
+    "signature": "ComponentDataModel_001",
+    "required": [
+        "signature",
+        "state",
+        "identifier",
+        "aliases",
+        "authorizedroles",
+        "multiworker",
+        "startworkerscount",
+        "maxworkerscount",
+        "attenuateminutes",
+        "workerclassname",
+        "directiveclassname",
+        "workerdirectives",
+        "idleminutes",
+        "stoponerror",
+        "maxqueuedepth",
+        
+        "sourcequeue",
+        "destinationqueue",
+        "adjunctqueue",
+        "resources"
+    ],
+    "identifier": "TwitterFetch",
+    "aliases": {
+        "filename": "TwitterFetch.json",
+        "alias": "TwitterFetch"
+    },
+    "iconfile": "nil",
+    "state": true,
+    "comment": "Fetches tweets from the users in twitternames.",
+    "authorizedroles": [
+        "task_001", "user_001", "worker_001", "app_001", "su_001", "admin_001"
+    ],
+    "multiworker": false,
+    "startworkerscount": 1,
+    "maxworkerscount": 20,
+    "attenuateminutes": 1,
+    "workerdirectives": [
+        "nil"
+    ],
+    "directiveclassname": "none",
+    "authsignature": "nil",
+    "workerclassname": "$BASE_PACKAGE$.workers.twitter.TwitterFetch",
+    "idleminutes": 0.25,
+    "stoponerror": false,
+    "sourcequeue": "TWITTER",
+    "maxqueuedepth": 20,
+    "destinationqueue": "NLP",
+    "adjunctqueue": "URL",
+    "errorqueue": "nil",
+    "alternategrid": "nil",
+    "resources": {
+        "include": {
+            "TwitterObject_001": {
+                "signature": "TwitterObject_001",
+                "consumerkey": {
+                    "state": true,
+                    "signature": "TransObject_001",
+                    "uri": "nil",
+                    "data": "1d1:35:3ec:wqbDisObcMOBwqLDl8OJw6PDmGvClcOBw4PCuMKmwobDhcOTw57DiHE="
+                },
+                "consumersecret": {
+                    "state": true,
+                    "signature": "TransObject_001",
+                    "uri": "nil",
+                    "data": "506:b7:4f9:w5fCt8Kew5LCmsOBwpTCkMObwrPDnsOcw5XDrG3DnsOUwr3DkcKjwqrDjcKqw4J4w4LCuMObwrnDgcOIw5t7eMKRwrXDgMOKw43DicOVdMOn"
+                },
+                "accesstoken": {
+                    "state": true,
+                    "signature": "TransObject_001",
+                    "uri": "nil",
+                    "data": "37e:5fb:34c:wpLCqcKlwqLCoXlWZ8Klwo7Cq8OKYsOcwr3DhMKhwq3CnMKwwpnClm3DnMKpZsKFwrvCmsK+w57DhcOkaMK6wqrDisKzwp/Dm8OBwo3DncOQwr7CjsOswrrDpMOd"
+                },
+                "accesssecret": {
+                    "state": true,
+                    "signature": "TransObject_001",
+                    "uri": "nil",
+                    "data": "1c4:19b:1de:wqfCmsOXw4LCisKOdsOiwrzCrsKxw5zDgsOjwrhjw6bDjMOKwqzCu8K7w5bCqsKaw4rCsMOWw4NWw5vCi8OAw5vClcKfbsOAw5fCvA=="
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,64 @@
+{
+    "signature": "StartUpList_001",
+    "identifier": "Cooperative Servers",
+    "version": "0.88.26",
+    "state": true,
+    "comment": "Start_Coop_Servers.json. Basic workers that provide server functions.",
+    "workers": {
+        "10": {
+            "comment": "Auth/Auth server.",
+            "state": true,
+            "configuration": "AuthWebAppWorker.json",
+            "resources": {
+                "sourcequeue": "nil",
+                "destinationqueue": "nil",
+                "adjunctqueue": "nil",
+                "errorqueue": "nil"
+            }
+        },
+        "20": {
+            "comment": "Resource server.",
+            "state": true,
+            "configuration": "ResourceWebAppWorker.json",
+            "resources": {
+                "sourcequeue": "nil",
+                "destinationqueue": "nil",
+                "adjunctqueue": "nil",
+                "errorqueue": "nil"
+            }
+        },
+        "30": {
+            "comment": "Listens for RequestObject requests.",
+            "state": true,
+            "configuration": "RequestObjectWebAppWorker.json",
+            "resources": {
+                "sourcequeue": "nil",
+                "destinationqueue": "nil",
+                "adjunctqueue": "nil",
+                "errorqueue": "nil"
+            }
+        },
+        "40": {
+            "comment": "Provides the API interfaces.",
+            "state": true,
+            "configuration": "DataServicesWebAppWorker.json",
+            "resources": {
+                "sourcequeue": "nil",
+                "destinationqueue": "nil",
+                "adjunctqueue": "nil",
+                "errorqueue": "nil"
+            }
+        },
+        "50": {
+            "comment": "Provides routes for the API interfaces.",
+            "state": true,
+            "configuration": "ServicesServlet.json",
+            "resources": {
+                "sourcequeue": "nil",
+                "destinationqueue": "nil",
+                "adjunctqueue": "nil",
+                "errorqueue": "nil"
+            }
+        }
+    }
+}

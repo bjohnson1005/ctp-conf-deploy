@@ -1,0 +1,64 @@
+{
+    "signature": "ComponentDataModel_001",
+    "required": [
+        "signature",
+        "state",
+        "identifier",
+        "aliases",
+        "authorizedroles",
+        "multiworker",
+        "startworkerscount",
+        "maxworkerscount",
+        "attenuateminutes",
+        "workerclassname",
+        "directiveclassname",
+        "workerdirectives",
+        "idleminutes",
+        "stoponerror",
+        "maxqueuedepth",
+        
+        "sourcequeue",
+        "resources"
+    ],
+    "identifier": "EsBulkWriter",
+    "aliases": {
+        "filename": "EsBulkWriter.json",
+        "alias": "EsBulkWriter"
+    },
+    "iconfile": "nil",
+    "state": true,
+    "comment": "Inputs a bulk ProcessObject instance into ElasticSearch for indexing.",
+    "authorizedroles": [
+        "task_001", "user_001", "worker_001", "app_001", "su_001", "admin_001"
+    ],
+    "multiworker": true,
+    "startworkerscount": 3,
+    "maxworkerscount": 20,
+    "attenuateminutes": 1,
+    "workerdirectives": [
+        "nil"
+    ],
+    "directiveclassname": "none",
+    "authsignature": "nil",
+    "workerclassname": "$BASE_PACKAGE$.workers.elastic.EsBulkWriter",
+    "idleminutes": 0.01,
+    "stoponerror": false,
+    "sourcequeue": "ES-BULK-WRITER",
+    "maxqueuedepth": 1000000,
+    "destinationqueue": "ES-DEST",
+    "adjunctqueue": "nil",
+    "errorqueue": "ES-ERROR",
+    "alternategrid": "nil",
+    "resources": {
+        "include": {
+            "EsBulkObject_001": {
+                "signature": "EsBulkObject_001",
+                "maxObjectCount": 500,
+                "maxBytes": 2048000,
+                "maxWatchCount": 3,
+                "initialDelaySeconds": 15,
+                "intervalSeconds": 60
+            }
+        }
+    }
+}

@@ -1,0 +1,72 @@
+{
+    "signature": "ComponentDataModel_001",
+    "required": [
+        "signature",
+        "state",
+        "identifier",
+        "aliases",
+        "authorizedroles",
+        "multiworker",
+        "startworkerscount",
+        "maxworkerscount",
+        "attenuateminutes",
+        "workerclassname",
+        "directiveclassname",
+        "workerdirectives",
+        "idleminutes",
+        "stoponerror",
+        "maxqueuedepth",
+        
+        "sourcequeue",
+        "resources"
+    ],
+    "identifier": "TextTranslation",
+    "aliases": {
+        "filename": "TextTranslation.json",
+        "alias": "TextTranslation"
+    },
+    "iconfile": "nil",
+    "state": true,
+    "comment": "Detects translate (convert) from one language to another using MicroSoft Translate service.",
+    "authorizedroles": [
+        "task_001", "user_001", "worker_001", "app_001", "su_001", "admin_001"
+    ],
+    "multiworker": true,
+    "startworkerscount": 3,
+    "maxworkerscount": 20,
+    "attenuateminutes": 1,
+    "workerdirectives": [
+        "nil"
+    ],
+    "directiveclassname": "none",
+    "authsignature": "nil",
+    "workerclassname": "$BASE_PACKAGE$.workers.language.TextTranslation",
+    "idleminutes": 0.01,
+    "stoponerror": false,
+    "sourcequeue": "TEXT-TRANS",
+    "maxqueuedepth": 1000,
+    "destinationqueue": "ZIP-WRITER",
+    "adjunctqueue": "nil",
+    "errorqueue": "nil",
+    "alternategrid": "nil",
+    "resources": {
+        "include": {
+            "MSTranslateClientObject_001": {
+                "signature": "MSTranslateClientObject_001",
+                "clientId": {
+                    "state": true,
+                    "signature": "TransObject_001",
+                    "uri": "nil",
+                    "data": "50a:4dc:354:YcOWwpTDksOSw4/Do8Kzwo4="
+                },
+                "clientSecret": {
+                    "state": true,
+                    "signature": "TransObject_001",
+                    "uri": "nil",
+                    "data": "587:353:25c:wqbDk8OUw4bDmsOrbMKvw4LCtsK3wqrCk3fDh8OWw57Dk8OXwp/CusOIwr/CrcKvw5bDg8KYwrXDo8OQw4TDjsOOwrXCssKyw6LDhsKowobDosKVwqY="
+                },
+                "chunkSize": 10240
+            }
+        }
+    }
+}

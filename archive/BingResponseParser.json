@@ -1,0 +1,100 @@
+{
+    "signature": "ComponentDataModel_001",
+    "required": [
+        "signature",
+        "state",
+        "identifier",
+        "aliases",
+        "authorizedroles",
+        "multiworker",
+        "startworkerscount",
+        "maxworkerscount",
+        "attenuateminutes",
+        "workerclassname",
+        "directiveclassname",
+        "workerdirectives",
+        "idleminutes",
+        "stoponerror",
+        "maxqueuedepth",
+        "resources",
+        "sourcequeue",
+        "destinationqueue",
+        "adjunctqueue",
+        "resources"
+    ],
+    "identifier": "BingResponseParser",
+    "aliases": {
+        "filename": "BingResponseParser.json",
+        "alias": "BingResponseParser"
+    },
+    "iconfile": "nil",
+    "state": true,
+    "comment": "Extracts text and metadata from response returned from a Bing query for further processing.",
+    "authorizedroles": [
+        "task_001", "user_001", "worker_001", "app_001", "su_001", "admin_001"
+    ],
+    "multiworker": false,
+    "startworkerscount": 1,
+    "maxworkerscount": 20,
+    "attenuateminutes": 1,
+    "workerdirectives": [
+        "nil"
+    ],
+    "directiveclassname": "none",
+    "authsignature": "nil",
+    "workerclassname": "$BASE_PACKAGE$.workers.bing.BingResponseParser",
+    "idleminutes": 0.01,
+    "stoponerror": false,
+    "sourcequeue": "BQUERY",
+    "maxqueuedepth": 250,
+    "destinationqueue": "ZIP-WRITER",
+    "adjunctqueue": "URL",
+    "errorqueue": "nil",
+    "alternategrid": "nil",
+    "resources": {
+        "include": {
+            "QueryObject_001": {
+                "signature": "QueryObject_001",
+                "queryurl": "https://api.datamarket.azure.com/Bing/Search/Web?Query=",
+                "querykey": {
+                    "state": true,
+                    "signature": "TransObject_001",
+                    "uri": "nil",
+                    "data": "430:4e2:429:w6XDlcKrw4/CkHFYw4vCs8K2V8Kiw6fCpsOFwqzDhnPDn8OZw6DCu8OSc8K/w5nDqsOYw5zDk8Kmw4fDhcKVwpbCnMKww4bCqcKcw4HCtMOYwrA="
+                },
+                "resultformat": "JSON",
+                "nextresultcode": "none",
+                "clusteralgorithm": "STCClusteringAlgorithm",
+                "maxresultcount": 10,
+                "maxdurationseconds": 2.5
+            },
+            "CalaisClientObject_001": {
+                "signature": "CalaisClientObject_001",
+                "licensekey": {
+                    "state": true,
+                    "signature": "TransObject_001",
+                    "uri": "nil",
+                    "data": "32c:620:e0:w5LDglTDpcKhwq3Dm8Oaw5HChsKcw5LDnsKfwqvCimPDmsOZwqzDgsOVU8OT"
+                },
+                "calaisurl": "http://api.opencalais.com/enlighten/calais.asmx/Enlighten",
+                "contentformat": "text/txt",
+                "outputformat": "xml/rdf"
+            },
+            "DbPediaObject_001": {
+                "signature": "DbPediaObject_001",
+                "querystring": "http://lookup.dbpedia.org/api/search.asmx/KeywordSearch?QueryClass=&MaxHits=10&QueryString=",
+                "maxhits": 10
+            },
+            "GeoNamesObject_001": {
+                "signature": "GeoNamesObject_001",
+                "username": {
+                    "state": true,
+                    "signature": "TransObject_001",
+                    "uri": "nil",
+                    "data": "none"
+                },
+                "languagecode": "en"
+            }
+        }
+    }
+}

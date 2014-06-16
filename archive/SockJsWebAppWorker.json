@@ -1,0 +1,88 @@
+{
+    "signature": "ComponentDataModel_001",
+    "required": [
+        "signature",
+        "state",
+        "identifier",
+        "aliases",
+        "authorizedroles",
+        "multiworker",
+        "startworkerscount",
+        "maxworkerscount",
+        "attenuateminutes",
+        "workerclassname",
+        "directiveclassname",
+        "workerdirectives",
+        "idleminutes",
+        "stoponerror",
+        "maxqueuedepth",
+        "resources"
+    ],
+    "identifier": "SockJsWebAppWorker",
+    "aliases": {
+        "filename": "SockJsWebAppWorker.json",
+        "alias": "SockJsWebAppWorker"
+    },
+    "iconfile": "nil",
+    "state": true,
+    "comment": "Starts a SockJS server via an embedded Vert.x.",
+    "authorizedroles": [
+        "task_001", "user_001", "worker_001", "app_001", "su_001", "admin_001"
+    ],
+    "multiworker": false,
+    "startworkerscount": 4,
+    "maxworkerscount": 8,
+    "attenuateminutes": 1,
+    "workerdirectives": [
+        "nil"
+    ],
+    "directiveclassname": "none",
+    "authsignature": "nil",
+    "workerclassname": "$BASE_PACKAGE$.workers.gateways.SockJsWebAppWorker",
+    "idleminutes": 0.1,
+    "stoponerror": false,
+    "sourcequeue": "nil",
+    "maxqueuedepth": 1000,
+    "destinationqueue": "nil",
+    "adjunctqueue": "nil",
+    "errorqueue": "nil",
+    "alternategrid": "nil",
+    "resources": {
+        "include": {
+            "ServerModel_001": {
+                "signature": "ServerModel_001",
+                "sslstate": true,
+                "clientauthstate": false,
+                "clientaddress": "none",
+                "clientport": 65535,
+                "serveraddress": "127.0.0.1",
+                "serverbindaddress": "0.0.0.0",
+                "serverport": 30000,
+                "canchangeports": false,
+                "webappobjects": [
+                    {
+                        "webapptype": "sockjs",
+                        "webappclassname": "none",
+                        "webappname": "SockJsWebAppWorker",
+                        "webappdirectory": ".",
+                        "webappcontextpath": "/*",
+                        "defaultdocument": "index.html",
+                        "maxformcontentsize": 524288,
+                        "maxformkeys": 512
+                    }
+                ]
+            },
+				"SockJsModel_001" :
+					{
+					  "signature" : "SockJsModel_001",
+					  "prefix" : "/testapp",
+					  "handlerclass" : "none",
+					  "insertjsessionid" : true,
+					  "sessiontimeoutseconds" : 5,
+					  "heartbeatperiodseconds" : 5,
+					  "maxbytesstreaming" : 128,
+					  "libraryurl" : "http://cdn.sockjs.org/sockjs-0.3.4.min.js"
+					}
+        }
+    }
+}

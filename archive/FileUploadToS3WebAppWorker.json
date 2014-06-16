@@ -1,0 +1,77 @@
+{
+    "signature": "ComponentDataModel_001",
+    "required": [
+        "signature",
+        "state",
+        "identifier",
+        "aliases",
+        "authorizedroles",
+        "multiworker",
+        "startworkerscount",
+        "maxworkerscount",
+        "attenuateminutes",
+        "workerclassname",
+        "directiveclassname",
+        "workerdirectives",
+        "idleminutes",
+        "stoponerror",
+        "maxqueuedepth",
+        "resources"
+    ],
+    "identifier": "FileUploadToS3WebAppWorker",
+    "aliases": {
+        "filename": "FileUploadToS3WebAppWorker.json",
+        "alias": "FileUploadToS3WebAppWorker"
+    },
+    "iconfile": "nil",
+    "state": true,
+    "comment": "Starts a HTTP web app server for a single servlet class via an embedded Jetty.",
+    "authorizedroles": [
+        "task_001", "user_001", "worker_001", "app_001", "su_001", "admin_001"
+    ],
+    "multiworker": false,
+    "startworkerscount": 1,
+    "maxworkerscount": 1,
+    "attenuateminutes": 1,
+    "workerdirectives": [
+        "nil"
+    ],
+    "directiveclassname": "none",
+    "authsignature": "nil",
+    "workerclassname": "$BASE_PACKAGE$.workers.gateways.WebAppWorker",
+    "idleminutes": 0.1,
+    "stoponerror": false,
+    "sourcequeue": "nil",
+    "maxqueuedepth": 1000,
+    "destinationqueue": "nil",
+    "adjunctqueue": "nil",
+    "errorqueue": "nil",
+    "alternategrid": "nil",
+    "resources": {
+        "include": {
+            "ServerModel_001": {
+                "signature": "ServerModel_001",
+                "sslstate": true,
+                "clientauthstate": false,
+                "clientaddress": "none",
+                "clientport": 65535,
+                "serveraddress": "127.0.0.1",
+                "serverbindaddress": "0.0.0.0",
+                "serverport": 46346,
+                "canchangeports": false,
+                "webappobjects": [
+                {
+                "webapptype": "servlet",
+                "webappclassname": "io.idvc.coop.basis.webapp.servlets.FileUploadToS3Servlet",
+                "webappname": "FileUploadToS3WebAppWorker",
+                "webappdirectory": "$HOME_PATH$/temp/testUploads",
+                "webappcontextpath": "/uploads",
+                "defaultdocument": "index.html",
+                "maxformcontentsize": 524288,
+                "maxformkeys": 512
+                }
+                ]
+            }
+        }
+    }
+}

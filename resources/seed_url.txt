@@ -1,0 +1,10 @@
+{ 
+"signature" : "ExternalListObject_001",
+"listofitems" : [
+"http://www.bing.com/search?q=TechSoup",
+"www.techsoup.org", 
+"www.gatesfoundation.org", 
+"www.msdf.org", 
+"www.cof.org" 
+]}
+  

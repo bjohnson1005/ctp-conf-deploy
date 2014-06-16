@@ -1,0 +1,8 @@
+{ 
+"signature" : "ExternalListObject_001",
+"listofitems" : [{
+
+"directive_name" : { "configuration" : "File.json", "code-2" : "SA", "code-3" : "SAU", "code-num" : 682, "country" : "SAUDI ARABIA" },
+"directive_name2" : { "configuration" : "File.json", "code-2" : "SA", "code-3" : "SAU", "code-num" : 682, "country" : "SAUDI ARABIA" }
+ }]
+}

@@ -1,0 +1,67 @@
+{
+    "signature": "ComponentDataModel_001",
+    "required": [
+        "signature",
+        "state",
+        "identifier",
+        "aliases",
+        "authorizedroles",
+        "multiworker",
+        "startworkerscount",
+        "maxworkerscount",
+        "attenuateminutes",
+        "workerclassname",
+        "directiveclassname",
+        "workerdirectives",
+        "idleminutes",
+        "stoponerror",
+        "maxqueuedepth",
+        
+        "sourcequeue",
+        "resources"
+    ],
+    "identifier": "ProcessObjectEmbedJsHtml",
+    "aliases": {
+        "filename": "ProcessObjectEmbedJsHtml.json",
+        "alias": "ProcessObjectEmbedJsHtml"
+    },
+    "iconfile": "nil",
+    "state": true,
+    "comment": "Writes ProcessObject instances to files wt an embedded JavaScript to output the ProcessObject and HTML.",
+    "authorizedroles": [
+        "task_001", "user_001", "worker_001", "app_001", "su_001", "admin_001"
+    ],
+    "multiworker": true,
+    "startworkerscount": 2,
+    "maxworkerscount": 20,
+    "attenuateminutes": 1,
+    "workerdirectives": [
+        "nil"
+    ],
+    "directiveclassname": "none",
+    "authsignature": "nil",
+    "workerclassname": "$BASE_PACKAGE$.workers.writers.ProcessObjectFileWriter",
+    "idleminutes": 0.1,
+    "stoponerror": false,
+    "sourcequeue": "WRITER-1",
+    "maxqueuedepth": 250,
+    "destinationqueue": "nil",
+    "adjunctqueue": "nil",
+    "errorqueue": "nil",
+    "alternategrid": "nil",
+    "resources": {
+        "include": {
+            "TransformerModel_001": {
+                "signature": "TransformerModel_001",
+                "script": "iterateObject.js",
+                "function": "none",
+                "template": "EmbedJs.html",
+                "fileextension": ".html",
+                "collectionsignature": "Appender_Object_001",
+                "collectionname": "objectCollection",
+                "writetodirectory": "$HOME_PATH$/writefiles/testwritetoJsEmbedHtml/",
+                "usefilename": "none"
+            }
+        }
+    }
+}

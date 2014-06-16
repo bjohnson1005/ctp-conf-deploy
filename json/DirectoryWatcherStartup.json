@@ -1,0 +1,75 @@
+{
+    "signature": "ComponentDataModel_001",
+    "required": [
+        "signature",
+        "state",
+        "identifier",
+        "aliases",
+        "authorizedroles",
+        "multiworker",
+        "startworkerscount",
+        "maxworkerscount",
+        "attenuateminutes",
+        "workerclassname",
+        "directiveclassname",
+        "workerdirectives",
+        "idleminutes",
+        "stoponerror",
+        "maxqueuedepth",
+        "resources"
+    ],
+    "identifier": "DirectoryWatcherStartup",
+    "aliases": {
+        "filename": "DirectoryWatcherStartup.json",
+        "alias": "DirectoryWatcherStartup"
+    },
+    "iconfile": "nil",
+    "state": true,
+    "comment": "Will cause the CTP to start a Worker when a CDM file is dropped into a folder.",
+    "authorizedroles": [
+        "task_001", "user_001", "worker_001", "app_001", "su_001", "admin_001"
+    ],
+    "multiworker": false,
+    "startworkerscount": 1,
+    "maxworkerscount": 20,
+    "attenuateminutes": 1,
+    "workerdirectives": [
+        "nil"
+    ],
+    "directiveclassname": "none",
+    "authsignature": "nil",
+    "workerclassname": "$BASE_PACKAGE$.workers.startup.DirectoryWatcherStartup",
+    "idleminutes": 0.10,
+    "stoponerror": false,
+    "sourcequeue": "self",
+    "maxqueuedepth": 1000,
+    "destinationqueue": "nil",
+    "adjunctqueue": "nil",
+    "errorqueue": "nil",
+    "alternategrid": "nil",
+    "resources": {
+        "include": {
+            "WatcherActionsObject_001": {
+                "signature": "WatcherActionsObject_001",
+                "directories": [
+                    "$DEPLOY_PATH$/conf/json/ondemand"
+                ],
+                "subdirectories": true,
+                "prefixes": [
+                    "."
+                ],
+                "extensions": [
+                    "nil"
+                ],
+                "actions": {
+                    "Directory Change": false,
+                    "Directory Create": false,
+                    "Directory Delete": false,
+                    "File Change": false,
+                    "File Create": true,
+                    "File Delete": true
+                }
+            }
+        }
+    }
+}

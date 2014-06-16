@@ -1,0 +1,8 @@
+{ 
+"signature" : "ExternalListObject_001",
+"listofitems" : [ 
+"topics.nytimes.com/top/reference/timestopics/subjects/p/philanthropy/index.html?rss=1", 
+  "fconline.foundationcenter.org/learnmore/rssgenr8a.php?pageurl=http://fdncenter.org/pnd/news/index_rss.jhtml", 
+  "www.grantvine.net/news/rss/", "feeds.feedburner.com/NetsquaredBlogFeed?format=xml" 
+  ]}
+  

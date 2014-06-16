@@ -1,0 +1,68 @@
+{
+    "signature": "ComponentDataModel_001",
+    "required": [
+        "signature",
+        "state",
+        "identifier",
+        "aliases",
+        "authorizedroles",
+        "multiworker",
+        "startworkerscount",
+        "maxworkerscount",
+        "attenuateminutes",
+        "workerclassname",
+        "directiveclassname",
+        "workerdirectives",
+        "idleminutes",
+        "stoponerror",
+        "maxqueuedepth",
+        
+        "sourcequeue",
+        "resources",
+        "destinationqueue"
+    ],
+    "identifier": "ProcessObjectBytesWriter",
+    "aliases": {
+        "filename": "ProcessObjectBytesWriter.json",
+        "alias": "ProcessObjectBytesWriter"
+    },
+    "iconfile": "nil",
+    "state": true,
+    "comment": "Writes ProcessObject instances to files, binary encoding (byte array).",
+    "authorizedroles": [
+        "task_001", "user_001", "worker_001", "app_001", "su_001", "admin_001"
+    ],
+    "multiworker": true,
+    "startworkerscount": 2,
+    "maxworkerscount": 20,
+    "attenuateminutes": 1,
+    "workerdirectives": [
+        "nil"
+    ],
+    "directiveclassname": "none",
+    "authsignature": "nil",
+    "workerclassname": "$BASE_PACKAGE$.workers.writers.ProcessObjectBytesWriter",
+    "idleminutes": 0.1,
+    "stoponerror": false,
+    "sourcequeue": "WRITER-5",
+    "maxqueuedepth": 1000,
+    "destinationqueue": "BYTES-WRITER",
+    "adjunctqueue": "nil",
+    "errorqueue": "nil",
+    "alternategrid": "nil",
+    "resources": {
+        "include": {
+            "TransformerModel_001": {
+                "signature": "TransformerModel_001",
+                "script": "none",
+                "function": "none",
+                "template": "none",
+                "fileextension": ".bin",
+                "collectionsignature": "Appender_Object_001",
+                "collectionname": "objectCollection",
+                "writetodirectory": "$HOME_PATH$/writefiles/testwritetoBytes/",
+                "usefilename": "none"
+            }
+        }
+    }
+}

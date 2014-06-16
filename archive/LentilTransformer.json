@@ -1,0 +1,60 @@
+{
+    "signature": "ComponentDataModel_001",
+    "required": [
+        "signature",
+        "state",
+        "identifier",
+        "aliases",
+        "authorizedroles",
+        "resources"
+    ],
+    "identifier": "LentilTransformer",
+    "aliases": {
+        "filename": "LentilTransformer.json",
+        "alias": "LentilTransformer"
+    },
+    "iconfile": "nil",
+    "state": true,
+    "comment": "Used in the context of a Service rather than a Worker configuration.",
+    "authorizedroles": [
+        "task_001", "user_001", "worker_001", "app_001", "su_001", "admin_001"
+    ],
+    "multiworker": false,
+    "startworkerscount": 1,
+    "maxworkerscount": 20,
+    "attenuateminutes": 1,
+    "workerdirectives": [
+        "none"
+    ],
+    "directiveclassname": "none",
+    "authsignature": "nil",
+    "workerclassname": "none",
+    "idleminutes": 0.1,
+    "stoponerror": false,
+    "sourcequeue": "nil",
+    "maxqueuedepth": 2000,
+    "destinationqueue": "nil",
+    "adjunctqueue": "nil",
+    "errorqueue": "nil",
+    "alternategrid": "nil",
+    "resources": {
+        "include": {
+            "TransformerModel_001": {
+                "signature": "TransformerModel_001",
+                "script": "lentil/gObject_6.js",
+                "function": "iterateObject",
+                "template": "none",
+                "fileextension": ".json",
+                "collectionsignature": "Google-Object-003",
+                "collectionname": "organizations",
+                "writetodirectory": "$HOME_PATH$/temp/testwritetoJson/",
+                "usefilename": "GFile_"
+            },
+            "ServicesObject_001": {
+                "servicesObject": {
+                "queryusing": "mongodb"
+                }
+            }
+        }
+    }
+}

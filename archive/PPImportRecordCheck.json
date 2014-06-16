@@ -1,0 +1,69 @@
+{
+    "signature": "ComponentDataModel_001",
+    "required": [
+        "signature",
+        "state",
+        "identifier",
+        "aliases",
+        "authorizedroles",
+        "startworkerscount",
+        "multiworker",
+        "maxworkerscount",
+        "attenuateminutes",
+        "workerclassname",
+        "directiveclassname",
+        "workerdirectives",
+        "idleminutes",
+        "stoponerror",
+        "maxqueuedepth",
+        "resources",
+        "sourcequeue",
+        "destinationqueue"
+    ],
+    "identifier": "PPImportRecordCheck",
+    "aliases": {
+        "filename": "PPImportRecordCheck.json",
+        "alias": "PPImportRecordCheck"
+    },
+    "iconfile": "nil",
+    "state": true,
+    "comment": "Parses CSV documents into Entity Object for import to Mongo.",
+    "authorizedroles": [
+        "task_001", "user_001", "worker_001", "app_001", "su_001", "admin_001"
+    ],
+    "multiworker": true,
+    "startworkerscount": 10,
+    "maxworkerscount": 50,
+    "attenuateminutes": 1,
+    "workerdirectives": [
+        "nil"
+    ],
+    "directiveclassname": "none",
+    "authsignature": "nil",
+    "workerclassname": "$BASE_PACKAGE$.workers.imports.ImportRecordCheck",
+    "idleminutes": 0.01,
+    "stoponerror": false,
+    "sourcequeue": "PP_RECORD_CHECK",
+    "maxqueuedepth": 80000,
+    "destinationqueue": "PP_IMPORT_PROCESS",
+    "adjunctqueue": "nil",
+    "errorqueue": "nil",
+    "alternategrid": "nil",
+    "resources": {
+        "include": {
+            "MongoSearchObject_001": {
+                "signature": "MongoSearchObject_001",
+                "queryString": "use_directive",
+                "mongoTerms": [],
+                "substitutions": {
+                    "ENTITY_MATTER": "domainMatter.domainMatter.EntityMatterObject_001.multiMap",
+                    "ENTITY_STATUS": "domainMatter.domainMatter.EntityMatterObject_001.multiMap.StatusObject_001",
+                    "ENTITY_OBJECT": "domainMatter.domainMatter.EntityMatterObject_001.multiMap.EntityObject_001"
+                },
+                "regexOptions": "i",
+                "from": 0,
+                "size": 20
+            }
+        }
+    }
+}

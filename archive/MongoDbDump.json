@@ -1,0 +1,74 @@
+{
+    "signature": "ComponentDataModel_001",
+    "required": [
+        "signature",
+        "state",
+        "identifier",
+        "aliases",
+        "authorizedroles",
+        "multiworker",
+        "startworkerscount",
+        "maxworkerscount",
+        "attenuateminutes",
+        "workerclassname",
+        "directiveclassname",
+        "workerdirectives",
+        "idleminutes",
+        "stoponerror",
+        "maxqueuedepth",
+        
+        "sourcequeue",
+        "resources"
+    ],
+    "identifier": "MongoDbDump",
+    "aliases": {
+        "filename": "MongoDbDump.json",
+        "alias": "MongoDbDump"
+    },
+    "iconfile": "nil",
+    "state": true,
+    "comment": "A search request to MongoDb - defaults to all to feed downstream workers.",
+    "authorizedroles": [
+        "task_001", "user_001", "worker_001", "app_001", "su_001", "admin_001"
+    ],
+    "multiworker": false,
+    "startworkerscount": 1,
+    "maxworkerscount": 20,
+    "attenuateminutes": 1,
+    "workerdirectives": [
+        "direct_dump_mongodb"
+    ],
+    "directiveclassname": "$BASE_PACKAGE$.prole.mongo.dumpmgo.DirectMongoDbDump",
+    "authsignature": "nil",
+    "workerclassname": "$BASE_PACKAGE$.workers.mongo.MongoDbDump",
+    "idleminutes": 0.01,
+    "stoponerror": false,
+    "sourcequeue": "MGO_DUMP_IN",
+    "maxqueuedepth": 1000,
+    "destinationqueue": "MGO_DUMP_OUT",
+    "adjunctqueue": "nil",
+    "errorqueue": "nil",
+    "alternategrid": "nil",
+    "resources": {
+        "include": {
+            "MongoSearchObject_001": {
+                "signature": "MongoSearchObject_001",
+                "queryString": "use_directive",
+                "mongoTerms": [],
+                "substitutions": {
+                    "ENTITY_MATTER": "domainMatter.domainMatter.EntityMatterObject_001.multiMap",
+                    "ENTITY_STATUS": "domainMatter.domainMatter.EntityMatterObject_001.multiMap.StatusObject_001",
+                    "ENTITY_OBJECT": "domainMatter.domainMatter.EntityMatterObject_001.multiMap.EntityObject_001"
+                },
+                "regexOptions": "i",
+                "from": 0,
+                "size": 20
+            },
+            "WriterObject_001": {
+                "signature": "WriterObject_001",
+                "writetodirectory": "$HOME_PATH$/temp/testwritetoJson/",
+                "deleteafterwrite": false
+            }
+        }
+    }
+}

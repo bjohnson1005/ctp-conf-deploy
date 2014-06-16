@@ -1,0 +1,10 @@
+{ "state" : true,
+  "signature" : "EnqueueObject_001",
+  "queues" : [ "none" ],
+  "source" : "nil",
+  "item" : "nil",
+  "metadata" : {
+"reference0" : "value0",
+"reference1" : "value1"
+  }
+}

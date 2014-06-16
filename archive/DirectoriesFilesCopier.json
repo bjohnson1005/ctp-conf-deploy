@@ -1,0 +1,60 @@
+{
+    "signature": "ComponentDataModel_001",
+    "required": [
+        "signature",
+        "state",
+        "identifier",
+        "aliases",
+        "authorizedroles",
+        "multiworker",
+        "startworkerscount",
+        "maxworkerscount",
+        "attenuateminutes",
+        "workerclassname",
+        "directiveclassname",
+        "workerdirectives",
+        "idleminutes",
+        "stoponerror",
+        "maxqueuedepth",
+        "resources"
+    ],
+    "identifier": "DirectoriesFilesCopier",
+    "aliases": {
+        "filename": "DirectoriesFilesCopier.json",
+        "alias": "DirectoriesFilesCopier"
+    },
+    "iconfile": "nil",
+    "state": true,
+    "comment": "Processes once - copy files from the directories specified in ExternalListObject.",
+    "authorizedroles": [
+        "task_001", "user_001", "worker_001", "app_001", "su_001", "admin_001"
+    ],
+    "multiworker": false,
+    "startworkerscount": 1,
+    "maxworkerscount": 20,
+    "attenuateminutes": 1,
+    "workerdirectives": [
+        "nil"
+    ],
+    "directiveclassname": "none",
+    "authsignature": "nil",
+    "workerclassname": "$BASE_PACKAGE$.workers.directories.DirectoriesFilesCopier",
+    "idleminutes": 1,
+    "stoponerror": false,
+    "sourcequeue": "nil",
+    "maxqueuedepth": 1000,
+    "destinationqueue": "nil",
+    "adjunctqueue": "nil",
+    "errorqueue": "nil",
+    "alternategrid": "nil",
+    "resources": {
+        "include": {
+            "WriterObject_001": {
+                "signature": "WriterObject_001",
+                "writetodirectory": "$HOME_PATH$/writefiles/testwritetoFolder/",
+                "deleteafterwrite": false
+            }
+        },
+        "ExternalListObject_001": "4_DocsToAlwaysCopy.txt"
+    }
+}

@@ -1,0 +1,38 @@
+{
+"signature" : "StartUpList_001",
+"identifier" : "Cooperative System Utils",
+"version" : "0.88.26",
+"state" : true,
+"comment" : "Start_System_Utils.json. Basic workers that provide system status.",
+
+"workers": {
+
+"10": {
+"comment":"Start the Cooperative system hearbeat.",
+"state": true,
+"configuration":"HeartBeat.json",
+"resources" : { "sourcequeue" : "nil",
+				"destinationqueue" : "nil",
+				"adjunctqueue" : "nil",
+				"errorqueue" : "nil" }},
+				
+"20": {
+"comment":"Cooperative Cache Status as repeating process.",
+"state": true,
+"configuration":"CacheStatus.json",
+"resources" : { "sourcequeue" : "nil",
+				"destinationqueue" : "nil",
+				"adjunctqueue" : "nil",
+				"errorqueue" : "nil" }},
+				
+"30": {
+"comment":"Periodic query to an NTP server wt. subsequent time adjustment.",
+"state": true,
+"configuration":"NTPTimeAdjustment.json",
+"resources" : { "sourcequeue" : "nil",
+				"destinationqueue" : "nil",
+				"adjunctqueue" : "nil",
+				"errorqueue" : "nil" }}
+				
+
+}}

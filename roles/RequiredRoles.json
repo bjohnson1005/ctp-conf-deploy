@@ -1,0 +1,315 @@
+{
+    "signature": "RequiredRoles_001",
+    "state": true,
+    "comment": "Roles and Permissions/Actions for this Cooperative.",
+    "requiredRolesMap": {
+        "QueryMatterObject_001": [
+            {
+                "role": {
+                    "role_su_001": [
+                        {
+                            "resource": "context_001",
+                            "action": "action_control_001",
+                            "targets": [
+                                "*"
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "role": {
+                    "role_admin_001": [
+                        {
+                            "resource": "context_001",
+                            "action": "action_control_001",
+                            "targets": [
+                                "*"
+                            ]
+                        }
+                    ]
+                }
+            }
+        ],
+        "ProcessObject_001": [
+            {
+                "role": {
+                    "role_su_001": [
+                        {
+                            "resource": "context_001",
+                            "action": "action_control_001",
+                            "targets": [
+                                "*"
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "role": {
+                    "role_admin_001": [
+                        {
+                            "resource": "context_001",
+                            "action": "action_control_001",
+                            "targets": [
+                                "*"
+                            ]
+                        }
+                    ]
+                }
+            }
+        ],
+        "EntityMatterObject_001": [
+            {
+                "role": {
+                    "role_su_001": [
+                        {
+                            "resource": "context_001",
+                            "action": "action_control_001",
+                            "targets": [
+                                "*"
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "role": {
+                    "role_admin_001": [
+                        {
+                            "resource": "context_001",
+                            "action": "action_control_001",
+                            "targets": [
+                                "*"
+                            ]
+                        }
+                    ]
+                }
+            }
+        ],
+        "UrlMatterObject_001": [
+            {
+                "role": {
+                    "role_su_001": [
+                        {
+                            "resource": "context_001",
+                            "action": "action_control_001",
+                            "targets": [
+                                "*"
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "role": {
+                    "role_admin_001": [
+                        {
+                            "resource": "context_001",
+                            "action": "action_control_001",
+                            "targets": [
+                                "*"
+                            ]
+                        }
+                    ]
+                }
+            }
+        ],
+        "ComponentDataModel_001": [
+            {
+                "role": {
+                    "role_su_001": [
+                        {
+                            "resource": "context_001",
+                            "action": "action_control_001",
+                            "targets": [
+                                "*"
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "role": {
+                    "role_admin_001": [
+                        {
+                            "resource": "context_001",
+                            "action": "action_control_001",
+                            "targets": [
+                                "*"
+                            ]
+                        }
+                    ]
+                }
+            }
+        ],
+        "DomainMatterObject_001": [
+            {
+                "role": {
+                    "role_su_001": [
+                        {
+                            "resource": "context_001",
+                            "action": "action_control_001",
+                            "targets": [
+                                "*"
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "role": {
+                    "role_admin_001": [
+                        {
+                            "resource": "context_001",
+                            "action": "action_control_001",
+                            "targets": [
+                                "*"
+                            ]
+                        }
+                    ]
+                }
+            }
+        ],
+        "CooperativeDataModel_001": [
+            {
+                "role": {
+                    "role_su_001": [
+                        {
+                            "resource": "context_001",
+                            "action": "action_control_001",
+                            "targets": [
+                                "*"
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "role": {
+                    "role_admin_001": [
+                        {
+                            "resource": "context_001",
+                            "action": "action_control_001",
+                            "targets": [
+                                "*"
+                            ]
+                        }
+                    ]
+                }
+            }
+        ],
+        "NewUserFactory_Class_001": [
+            {
+                "role": {
+                    "role_su_001": [
+                        {
+                            "resource": "*",
+                            "action": "action_status_001",
+                            "targets": [
+                                "*"
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "role": {
+                    "role_admin_001": [
+                        {
+                            "resource": "*",
+                            "action": "action_status_001",
+                            "targets": [
+                                "*"
+                            ]
+                        }
+                    ]
+                }
+            }
+        ],
+        "TextMatterObject_001": [
+            {
+                "role": {
+                    "role_su_001": [
+                        {
+                            "resource": "context_001",
+                            "action": "action_control_001",
+                            "targets": [
+                                "*"
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "role": {
+                    "role_admin_001": [
+                        {
+                            "resource": "context_001",
+                            "action": "action_control_001",
+                            "targets": [
+                                "*"
+                            ]
+                        }
+                    ]
+                }
+            }
+        ],
+        "ProcessMatterObject_001": [
+            {
+                "role": {
+                    "role_su_001": [
+                        {
+                            "resource": "context_001",
+                            "action": "action_control_001",
+                            "targets": [
+                                "*"
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "role": {
+                    "role_admin_001": [
+                        {
+                            "resource": "context_001",
+                            "action": "action_control_001",
+                            "targets": [
+                                "*"
+                            ]
+                        }
+                    ]
+                }
+            }
+        ],
+        "AuthMatterObject_001": [
+            {
+                "role": {
+                    "role_su_001": [
+                        {
+                            "resource": "context_001",
+                            "action": "action_control_001",
+                            "targets": [
+                                "*"
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "role": {
+                    "role_admin_001": [
+                        {
+                            "resource": "context_001",
+                            "action": "action_control_001",
+                            "targets": [
+                                "*"
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

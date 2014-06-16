@@ -1,0 +1,60 @@
+{
+    "signature": "ComponentDataModel_001",
+    "required": [
+        "signature",
+        "state",
+        "identifier",
+        "aliases",
+        "authorizedroles",
+        "multiworker",
+        "startworkerscount",
+        "maxworkerscount",
+        "attenuateminutes",
+        "workerclassname",
+        "directiveclassname",
+        "workerdirectives",
+        "idleminutes",
+        "stoponerror",
+        "maxqueuedepth",
+        "resources"
+    ],
+    "identifier": "EsMapping",
+    "aliases": {
+        "filename": "EsMapping.json",
+        "alias": "EsMapping"
+    },
+    "iconfile": "nil",
+    "state": true,
+    "comment": "Inputs a mapping instance into ElasticSearch for indexing. Uses a REST interface at port 9200.",
+    "authorizedroles": [
+        "task_001", "user_001", "worker_001", "app_001", "su_001", "admin_001"
+    ],
+    "multiworker": false,
+    "startworkerscount": 1,
+    "maxworkerscount": 20,
+    "attenuateminutes": 1,
+    "workerdirectives": [
+        "nil"
+    ],
+    "directiveclassname": "none",
+    "authsignature": "nil",
+    "workerclassname": "$BASE_PACKAGE$.workers.elastic.EsMapping",
+    "idleminutes": 0.01,
+    "stoponerror": false,
+    "sourcequeue": "nil",
+    "maxqueuedepth": 1000,
+    "destinationqueue": "nil",
+    "adjunctqueue": "nil",
+    "alternategrid": "nil",
+    "resources": {
+        "include": {
+            "EsSettingsObject_001": {
+                "signature": "EsSettingsObject_001",
+                "settings": {
+                    "number_of_shards": 3,
+                    "number_of_replicas": 2
+                }
+            }
+        }
+    }
+}

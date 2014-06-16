@@ -1,0 +1,83 @@
+{
+    "signature": "ComponentDataModel_001",
+    "required": [
+        "signature",
+        "state",
+        "identifier",
+        "aliases",
+        "authorizedroles",
+        "multiworker",
+        "startworkerscount",
+        "maxworkerscount",
+        "attenuateminutes",
+        "workerclassname",
+        "directiveclassname",
+        "workerdirectives",
+        "idleminutes",
+        "stoponerror",
+        "maxqueuedepth",
+        
+        "sourcequeue",
+        "destinationqueue",
+        "resources"
+    ],
+    "identifier": "GateAnnieTextPipeline",
+    "aliases": {
+        "filename": "GateAnnieTextPipeline.json",
+        "alias": "GateAnnieTextPipeline"
+    },
+    "iconfile": "nil",
+    "state": true,
+    "comment": "Text annotator and entity extractor (pipeline) using GATE Annie component.",
+    "authorizedroles": [
+        "task_001", "user_001", "worker_001", "app_001", "su_001", "admin_001"
+    ],
+    "multiworker": false,
+    "startworkerscount": 1,
+    "maxworkerscount": 20,
+    "attenuateminutes": 1,
+    "workerdirectives": [
+        "nil"
+    ],
+    "directiveclassname": "none",
+    "authsignature": "nil",
+    "workerclassname": "$BASE_PACKAGE$.workers.gate.GateAnnieTextPipeline",
+    "idleminutes": 0.01,
+    "stoponerror": false,
+    "sourcequeue": "NLP",
+    "maxqueuedepth": 250,
+    "destinationqueue": "ENTITIES",
+    "adjunctqueue": "nil",
+    "errorqueue": "nil",
+    "alternategrid": "nil",
+    "resources": {
+        "include": {
+            "GateObject_001": {
+                "signature": "GateObject_001",
+                "gatehome": "$DEPLOY_PATH$/gate",
+                "loadannieprops": false,
+                "gazetteerfile": "/resources/gazetteer/lists.def",
+                "grammerfile": "/resources/NE/main.jape",
+                "summarizeby": "nouns",
+                "summarizewithin": 0.95
+            },
+            "AnnotationTokensObject_001": {
+                "signature": "AnnotationTokensObject_001",
+                "annotationTokens": [
+                    "Token",
+                    "Address",
+                    "Date",
+                    "Organization",
+                    "Location",
+                    "Money",
+                    "Identifier",
+                    "FirstPerson",
+                    "JobTitle",
+                    "Title",
+                    "Percent",
+                    "Person"
+                ]
+            }
+        }
+    }
+}

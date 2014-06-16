@@ -1,0 +1,53 @@
+{
+    "signature": "StartUpList_001",
+    "identifier": "Cooperative Node Status Workers",
+    "version": "0.88.26",
+    "state": true,
+    "comment": "Start_Coop_StatusInterfaces.json. Basic workers that provide CTP node status.",
+    "workers": {
+        "10": {
+            "comment": "Status on port 62627.",
+            "state": true,
+            "configuration": "WicketStatusWebAppWorker.json",
+            "resources": {
+                "sourcequeue": "nil",
+                "destinationqueue": "nil",
+                "adjunctqueue": "nil",
+                "errorqueue": "nil"
+            }
+        },
+        "20": {
+            "comment": "CTP Node logs on port 62626.",
+            "state": true,
+            "configuration": "WicketCLoggerWebAppWorker.json",
+            "resources": {
+                "sourcequeue": "nil",
+                "destinationqueue": "nil",
+                "adjunctqueue": "nil",
+                "errorqueue": "nil"
+            }
+        },
+        "30": {
+            "comment": "CTP Node logs to PostGres.",
+            "state": true,
+            "configuration": "CLoggerDbWriter.json",
+            "resources": {
+                "sourcequeue": "nil",
+                "destinationqueue": "nil",
+                "adjunctqueue": "nil",
+                "errorqueue": "nil"
+            }
+        },
+        "40": {
+            "comment": "CTP Node registry status on port 63627.",
+            "state": true,
+            "configuration": "WicketNodeWebAppWorker.json",
+            "resources": {
+                "sourcequeue": "nil",
+                "destinationqueue": "nil",
+                "adjunctqueue": "nil",
+                "errorqueue": "nil"
+            }
+        }
+    }
+}

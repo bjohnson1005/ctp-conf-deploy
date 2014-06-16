@@ -1,0 +1,77 @@
+{
+    "signature": "ComponentDataModel_001",
+    "required": [
+        "signature",
+        "state",
+        "identifier",
+        "aliases",
+        "authorizedroles",
+        "multiworker",
+        "startworkerscount",
+        "maxworkerscount",
+        "attenuateminutes",
+        "workerclassname",
+        "directiveclassname",
+        "workerdirectives",
+        "idleminutes",
+        "stoponerror",
+        "maxqueuedepth",
+        "resources"
+    ],
+    "identifier": "EmailReader",
+    "aliases": {
+        "filename": "EmailReader.json",
+        "alias": "EmailReader"
+    },
+    "iconfile": "nil",
+    "state": true,
+    "comment": "Fetches emails and attachments. Use an imapport of 0 for the default or 993, which is the default.",
+    "authorizedroles": [
+        "task_001", "user_001", "worker_001", "app_001", "su_001", "admin_001"
+    ],
+    "multiworker": false,
+    "startworkerscount": 1,
+    "maxworkerscount": 20,
+    "attenuateminutes": 1,
+    "workerdirectives": [
+        "nil"
+    ],
+    "directiveclassname": "none",
+    "authsignature": "nil",
+    "workerclassname": "$BASE_PACKAGE$.workers.email.EmailReader",
+    "idleminutes": 5,
+    "stoponerror": false,
+    "sourcequeue": "nil",
+    "maxqueuedepth": 1000,
+    "destinationqueue": "nil",
+    "adjunctqueue": "nil",
+    "errorqueue": "nil",
+    "alternategrid": "nil",
+    "resources": {
+        "include": {
+            "ImapObject_001": {
+                "signature": "ImapObject_001",
+                "protocol": "imaps",
+                "imapuser": {
+                    "state": true,
+                    "signature": "TransObject_001",
+                    "uri": "nil",
+                    "data": "457:61f:3f1:w5LDm8Onw57DpcKSw6LDjsKJw5TCpcOVw5HDk8OOw57Cl8OXwo/DmQ=="
+                },
+                "imappassword": {
+                    "state": true,
+                    "signature": "TransObject_001",
+                    "uri": "nil",
+                    "data": "449:167:63f:w5TChcOUwrDDlMOZw5HDj8OmwpnCpFHCoQ=="
+                },
+                "imaphost": "imap.gmail.com",
+                "imapport": 0,
+                "folder": "Inbox",
+                "skipreadmessages": true,
+                "deletemessages": false,
+                "writetodirectory": "$HOME_PATH$/writefiles/emails/",
+                "debug": false
+            }
+        }
+    }
+}
