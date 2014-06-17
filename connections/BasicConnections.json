@@ -63,7 +63,7 @@
         "signature": "EsClientObject_001",
         "cluster": "Coop-ESCluster",
         "protocol": "http",
-        "hostname": "54.235.208.193",
+        "hostname": "10.11.3.16",
         "httpport": 9200,
         "transportport": 9300,
         "checkclusterstatus": false,
@@ -81,7 +81,7 @@
         },
         "indices": [
             {
-                "index": "coop-test-index",
+                "index": "coop-prod-index",
                 "indextype": "processObject",
                 "mapping": "none",
                 "mappingfile": "nil"
@@ -90,7 +90,7 @@
     },
     "mongodb": {
         "signature": "MongoClientObject_001",
-        "database": "coop-test-objects",
+        "database": "coop-prod-objects",
         "collection": "processObjects",
         "indexFields": {
             "timestamp": 1,
@@ -98,7 +98,7 @@
             "id": 1
         },
         "hosts": {
-            "54.235.203.67": 27017
+            "10.11.0.7": 27017
         },
         "key": {
             "state": true,
@@ -142,7 +142,7 @@
 			"gridispublic": false,
 			"gridpropertiesfile": "nil",
 			"gridbackingpropertiesfile": "backingcache.xml",
-			"gridhost": "54.235.203.67",
+			"gridhost": "10.11.0.7",
 			"gridport": 27017,
 			"griddatastore": "coop",
 			"griddatabucket": "datagrid",
@@ -205,13 +205,13 @@
             "state": true,
             "signature": "TransObject_001",
             "uri": "nil",
-            "data": "587:547:177:w5fDocOkw53ChcOmw5DDpsOdw6XDlw=="
+            "data": "3e0:2af:16c:w4/Dm8Okw57ChcOgw5DDosKJw6rDhsKfwpnCp8KawpZTYcKUwpnCpFLCpg=="
         },
         "sslkeysecret": {
             "state": true,
             "signature": "TransObject_001",
             "uri": "nil",
-            "data": "5c8:1fd:5d5:woPDncOew57ChcOnw43DqMObw5/DiA=="
+            "data": "492:3dc:3db:w4TDnMKPw6HDmsObw5TClMKJw6rDmsKowqLCm8KoUMKXwpbCocKdwpjCp8Kn"
         },
         "truststore": "none",
         "truststoresecret": {
