@@ -61,7 +61,7 @@
     },
     "elasticsearch": {
         "signature": "EsClientObject_001",
-        "cluster": "Automaton-ESCluster",
+        "cluster": "Coop-ESCluster",
         "protocol": "http",
         "hostname": "54.235.208.193",
         "httpport": 9200,
